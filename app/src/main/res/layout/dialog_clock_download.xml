@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_white_corner_12">
+
+
+    <com.worldtech.clockanimation.ClockProgressBar
+        android:id="@+id/custom_progress"
+        android:layout_width="@dimen/dimen_48dp"
+        android:layout_height="@dimen/dimen_48dp"
+        android:layout_marginTop="@dimen/dimen_28dp"
+        app:progress_background_color="@color/color_c0c0c0"
+        app:progress_shader="sweep"
+        app:progress_start_color="@color/color_ffe400"
+        app:progress_end_color="@color/color_ffe400"
+        app:progress_stroke_width="3dp"
+        app:progress_style="solid_line"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_width="@dimen/dimen_3dp"
+        android:layout_height="@dimen/dimen_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_circle"
+        app:layout_constraintStart_toStartOf="@+id/custom_progress"
+        app:layout_constraintEnd_toEndOf="@+id/custom_progress"
+        android:background="@drawable/shape_grey_custom_clock_short"/>
+
+    <View
+        android:id="@+id/view_hand"
+        android:layout_width="@dimen/dimen_2dp"
+        android:layout_height="@dimen/dimen_18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_circle"
+        app:layout_constraintStart_toStartOf="@+id/custom_progress"
+        app:layout_constraintEnd_toEndOf="@+id/custom_progress"
+        android:background="@drawable/shape_grey_custom_clock_long"
+        android:layout_marginBottom="@dimen/dimen_3dp"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_circle"
+        android:layout_width="@dimen/dimen_6dp"
+        android:layout_height="@dimen/dimen_6dp"
+        android:background="@drawable/shape_circle_grey"
+        app:layout_constraintTop_toTopOf="@+id/custom_progress"
+        app:layout_constraintBottom_toBottomOf="@+id/custom_progress"
+        app:layout_constraintStart_toStartOf="@+id/custom_progress"
+        app:layout_constraintEnd_toEndOf="@+id/custom_progress"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_222222"
+        android:textSize="@dimen/text_size_15dp"
+        app:layout_constraintTop_toBottomOf="@+id/custom_progress"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_40dp"
+        android:text="游戏加载中，请稍后"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_13dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:background="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
